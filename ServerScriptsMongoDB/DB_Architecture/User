@@ -1,0 +1,16 @@
+{
+	Name:
+	User_id: (mobileNum) DOuble (key)
+	HomeList:
+	{
+		Home_idsListPermanent:
+		Home_idsListTemp:
+	}
+	MetaData:
+	{    aadhaar
+		email
+		Addr.
+		Mobile
+		location co-ordinates
+	}
+}

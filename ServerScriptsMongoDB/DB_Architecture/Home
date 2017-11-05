@@ -1,0 +1,45 @@
+{
+	Home_id: Double (key)
+	Pincode:
+	Address:
+	Permanent Persons:
+	{
+		User_id: Double (key):
+		{
+			HubInControl: Hub_id:[slaveId]
+			cookie
+		}
+
+	}
+	Temporary Persons:
+	{
+		User_id: Double (key):
+		{	
+			HubInControl: Hub_id
+			SlaveInControl: #listOfSlaves
+			lease Period: TimePeriod
+		}
+	}
+	Hub:
+	{
+		Hub_idInHome: 
+		{	
+			SlaveId1:Status
+			SlaveId2:Status
+			SlaveId3:Status
+		}
+	}
+	Backup:
+	{
+		Room1:
+		{
+			name:
+			Slaves:
+		}
+		Room2:
+		{
+			name:
+			Slaves:
+		}
+	}
+}

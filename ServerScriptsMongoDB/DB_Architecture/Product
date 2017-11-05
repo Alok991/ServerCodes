@@ -1,0 +1,14 @@
+{
+	ProductId: Double(Key)
+	Type: M/S
+	NoOfSwitches: 
+	Data:
+	{
+		Name:[type,index]
+	}
+	ParenrHomeId:
+	ProdcuId:
+	{
+		//in case it is master
+	}
+}

@@ -1,0 +1,40 @@
+Android/website → Server
+Registration of new user : A-A-Name-PhoneNdelumber-password
+Login : A-B-PhoneNumber-password
+Control Frame : A-C-cookie-homeId-hubId-SlaveID-swNumber-NwState
+Logout :  A-D-cookie
+Password change: 
+//Add new switchBoard Not applicable in B2B
+Add new User : A-E-cookie-homeid-UserID_NEW-SlaveIDsList
+Remove a user : A-F-cookie-homeid-userID
+//Remove a switchboard Not applicable in B2B
+Request status : A-G-Home_ID-MasterID
+
+Server → Android/website
+Server sending status to android : S-H-Home_id-Master_id-JSON_DATA
+Server sending update to android: S-I-SUCCESS/ERROR_CODE
+Registration/Login ack : S-J-SUCCESS/ERROR_CODE
+Add/Remove username ack S-K-SUCCESS/ERROR_CODE
+//Add/Remove switchBoard ack  Not applicable
+
+
+ESP →  STM
+
+
+Android → ESP (P2P)
+Uniques key exchange  with ssid and password : #-A-N-unique_key-SSID-password reply: SUCCESS
+control messages #-A-O-MasterID-SlaveID-data-  $data is to be parsed by slave nodes reply=SUCCESS
+Send_ids #-A-P-Home_ID-Master_ID-Slave_ID1-Slave_ID2…-
+Update latest data request #-A-Q-MasterID-SlaveID- reply=data
+Reconnect wifi: #-A-U-
+ESP → Android(P2P)
+mDNS name: H-R-mDNS
+Update request reply #-1-0-1-1-4-0, #-19
+
+ESP → Server
+Registration : H-S-hub_id 
+Update: H-T-Home_id-hub_id-Slave_Id-SwNum-State
+
+Server → ESP
+Update reply: #-S-V-SUCCESS-
+Control : #-S-W-home_id-hub_id-slave_id-SwNum-state-
